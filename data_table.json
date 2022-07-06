@@ -1,0 +1,33 @@
+[{
+    "firstname": "Avigail",
+    "lastname": "Rosenfeld",
+    "address": {
+	    "street": "Emek ayalon",
+	    "city": "Givat zeev"        
+        }
+},
+{
+    "firstname": "Achia",
+    "lastname": "Rosenfeld",
+    "address": {
+            "street": "Emek ayalon",
+            "city": "Givat zeev"
+        }
+},
+{
+    "firstname": "Yaara",
+    "lastname": "Rosenfeld",
+    "address": {
+            "street": "Emek ayalon",
+            "city": "Givat zeev"
+        }
+},
+{
+    "firstname": "Uri",
+    "lastname": "Kobi",
+    "address": {
+            "street": "Dont know",
+            "city": "maale adumim"
+        }
+}
+]
