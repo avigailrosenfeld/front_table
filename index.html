@@ -13,7 +13,7 @@
   <body>
     <div id="filters">
       <input type="text" id="table_filter" onkeyup="filter()" placeholder="Search value.." title="Type in a value"/>
-      <select id="properties_list" >
+      <select id="properties_list" onchange="filter()">
       </select> 
     </div>
     <table id="main"></table>
