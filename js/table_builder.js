@@ -1,4 +1,4 @@
-import dataTable from '../data_table.json' assert {type: 'json'}
+import dataTable from '../example_data.json' assert {type: 'json'}
 
 //Get data from json 
 var result = []

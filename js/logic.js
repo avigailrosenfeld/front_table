@@ -1,4 +1,4 @@
-//Recursive nested header table and drop doun for filter
+//Recursive nested header table and drop down for filter
 function iterateTableTitles(result, element, option) {
     for (var property in result) {
         if (result.hasOwnProperty(property)) {
