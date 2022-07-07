@@ -1,3 +1,4 @@
+//Recursive nested header table and drop doun for filter
 function iterateTableTitles(result, element, option) {
     for (var property in result) {
         if (result.hasOwnProperty(property)) {
@@ -5,14 +6,17 @@ function iterateTableTitles(result, element, option) {
                 var newElement = document.createElement('th')
                 newElement.textContent = property
                 element.appendChild(newElement)
+                //Preper drop down
                 var newDropDownElement = document.createElement('option')
                 newDropDownElement.textContent = property
                 option.appendChild(newDropDownElement)
+                //For object child
                 iterateTableTitles(result[property], newElement, option)
             } else {
                 var newElement = document.createElement('th')
                 newElement.textContent = property
                 element.appendChild(newElement)
+                //Preper drop down
                 var newDropDownElement = document.createElement('option')
                 newDropDownElement.textContent = property
                 option.appendChild(newDropDownElement)
@@ -21,6 +25,7 @@ function iterateTableTitles(result, element, option) {
     }
 }
 
+//Recursive nested data table
 function iterateTable(result, element, level = '') {
     for (var property in result) {
         if (result.hasOwnProperty(property)) {
@@ -28,6 +33,7 @@ function iterateTable(result, element, level = '') {
                 var nestedElement = document.createElement('tr')
                 nestedElement.className = 'row' + level + ' ' + property
                 element.appendChild(nestedElement);
+                //For object child
                 iterateTable(result[property], nestedElement, 'level')
 
             } else {
@@ -40,6 +46,7 @@ function iterateTable(result, element, level = '') {
     }
 }
 
+//Filter data table
 function filter() {
     var input, filter, table, tr, td, i, selected;
     selected = $('#properties_list').val()
