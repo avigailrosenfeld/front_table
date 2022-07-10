@@ -11,12 +11,17 @@
   </head>
 
   <body>
+    <h2>Nested objects</h2>
     <div id="filters">
-      <input type="text" id="table_filter" onkeyup="filter()" placeholder="Search value.." title="Type in a value"/>
+      <h1>Filter by: </h1>
       <select id="properties_list" onchange="filter()">
-      </select> 
+      </select>
+      <input type="text" id="table_filter" onkeyup="filter()" placeholder="Search value.." title="Type in a value"/>
     </div>
     <table id="main"></table>
+    <footer id="footer">
+         <p> By Avigail Rosenfeld </p>
+    </footer>
   </body>
 </html>
 

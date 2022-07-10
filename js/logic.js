@@ -1,23 +1,23 @@
 //Recursive nested header table and drop down for filter
 function iterateTableTitles(result, element, option) {
-    for (var property in result) {
+    for (let property in result) {
         if (result.hasOwnProperty(property)) {
-            if (typeof result[property] == "object") {
-                var newElement = document.createElement('th')
+            if (typeof result[property] === "object") {
+                let newElement = document.createElement('th')
                 newElement.textContent = property
                 element.appendChild(newElement)
                 //Preper drop down
-                var newDropDownElement = document.createElement('option')
+                let newDropDownElement = document.createElement('option')
                 newDropDownElement.textContent = property
                 option.appendChild(newDropDownElement)
                 //For object child
                 iterateTableTitles(result[property], newElement, option)
             } else {
-                var newElement = document.createElement('th')
+                let newElement = document.createElement('th')
                 newElement.textContent = property
                 element.appendChild(newElement)
                 //Preper drop down
-                var newDropDownElement = document.createElement('option')
+                let newDropDownElement = document.createElement('option')
                 newDropDownElement.textContent = property
                 option.appendChild(newDropDownElement)
             }
@@ -27,17 +27,17 @@ function iterateTableTitles(result, element, option) {
 
 //Recursive nested data table
 function iterateTable(result, element, level = '') {
-    for (var property in result) {
+    for (let property in result) {
         if (result.hasOwnProperty(property)) {
-            if (typeof result[property] == "object") {
-                var nestedElement = document.createElement('tr')
+            if (typeof result[property] === "object") {
+                let nestedElement = document.createElement('tr')
                 nestedElement.className = 'row' + level + ' ' + property
                 element.appendChild(nestedElement);
                 //For object child
                 iterateTable(result[property], nestedElement, 'level')
 
             } else {
-                var newElement = document.createElement('td')
+                let newElement = document.createElement('td')
                 newElement.textContent = result[property]
                 newElement.className = 'col' + ' ' + property
                 element.appendChild(newElement)
@@ -48,7 +48,7 @@ function iterateTable(result, element, level = '') {
 
 //Filter data table
 function filter() {
-    var input, filter, table, tr, td, i, selected;
+    let input, filter, table, tr, td, i, selected;
     selected = $('#properties_list').val()
     input = document.getElementById("table_filter")
     filter = input.value.toUpperCase()
@@ -58,7 +58,7 @@ function filter() {
 
     for (i = 0; i < tr.length; i++) {
       tr[i].style.display = "none"
-      for (var j = 0; j < td.length; j++) {
+      for (let j = 0; j < td.length; j++) {
         if (td[j].innerHTML.toUpperCase().indexOf(filter) > -1){
           tr[j].style.display = "" 
         }
